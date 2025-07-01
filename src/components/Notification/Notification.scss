@@ -1,0 +1,27 @@
+.notification{
+    &_container{
+        padding: 8px;
+    }
+    &_icon{
+        width: 24px;;
+        height: 24px;
+    }
+    &_count{
+        top: 5px;
+        right: 5px;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #4B6A4F;
+        border: 2px solid #FFFFFF;
+        // color: #FFFFFF;
+        font-size: 10px;
+        font-weight: 500;
+        // display: flex;
+        // align-items: center;
+        // justify-content: center;
+        &_small{
+            font-size: 6px;
+        }
+    }
+}
