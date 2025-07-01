@@ -1,4 +1,4 @@
-import type { JSX } from "react";
+import { Fragment, type JSX } from "react";
 import "./Breadcrumbs.scss";
 import chevron from "../../assets/Chevron.svg";
 import more_options from "../../assets/More.svg";
@@ -6,7 +6,7 @@ import more_options from "../../assets/More.svg";
 function Breadcrumbs({
   path,
   separator = "/",
-  separatorElement = (
+  SeparatorElement =() => (
     <img
       src={chevron}
       className="breadcrumbs_path_separator"
@@ -22,7 +22,7 @@ function Breadcrumbs({
 }: {
   path: string;
   separator?: string;
-  separatorElement?: JSX.Element;
+  SeparatorElement?: () => JSX.Element;
   onPathClick?: Function;
   onMoreOptionsClick?: Function;
 }): JSX.Element {
@@ -31,7 +31,7 @@ function Breadcrumbs({
     <div className="breadcrumbs flex flex-row items-center justify-start">
       {paths.map((_path: string, index: number) => {
         return (
-          <>
+          <Fragment key={index}>
             <span
               key={index}
               className="breadcrumbs_path font-bold"
@@ -39,8 +39,8 @@ function Breadcrumbs({
             >
               {_path}
             </span>
-            {index !== paths.length - 1 && separatorElement}
-          </>
+            {index !== paths.length - 1 && <SeparatorElement key={`index-${index}`} />}
+          </Fragment>
         );
       })}
       <img
