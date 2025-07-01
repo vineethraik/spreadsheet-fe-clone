@@ -1,0 +1,16 @@
+.breadcrumbs{
+    color: black;
+    gap: 4px;
+    font-size: 14px;
+    &_path{
+        cursor: pointer;
+        color: #AFAFAF;
+        &:last-of-type{
+            color: #121212;
+        }
+        &_separator{
+            width: 12px;
+            height: 12px;
+        }
+    }
+}
