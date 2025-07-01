@@ -1,10 +1,12 @@
-import './App.css'
+import type { JSX } from 'react';
+import SheetPage from '../SheetPage/SheetPage';
+import './App.scss'
 
-function App() {
+function App(): JSX.Element {
 
   return (
-   <div className='flex items-center'>test</div>
-  )
+   <SheetPage />
+  );
 }
 
 export default App
