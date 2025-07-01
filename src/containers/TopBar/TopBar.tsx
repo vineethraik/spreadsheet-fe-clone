@@ -2,6 +2,7 @@ import type { JSX } from 'react';
 import './TopBar.scss';
 import panel from '../../assets/Panel.svg';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
+import SearchPill from '../../components/SearchPill/SearchPill';
 
 
 function TopBar(): JSX.Element {
@@ -25,7 +26,7 @@ function TopBar(): JSX.Element {
           <Breadcrumbs path={path} />
         </div>
         <div className="top_bar_container_right flex flex-row items-center justify-end">
-          b
+          <SearchPill />
         </div>
       </div>
     );

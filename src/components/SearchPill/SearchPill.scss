@@ -1,0 +1,30 @@
+.search_pill{
+    color: black;
+    gap: 4px;
+    font-size: 14px;
+    &_container{
+        width: 165px;
+        padding: 12px;
+        gap: 8px;
+        border-radius: 6px;
+        background-color: #F6F6F6;
+        &_search{
+            width: 16px;
+            height: 16px;
+        }
+        &_input{
+            &_container{
+                overflow: hidden;
+            }
+            width: 100%;
+            overflow: scroll;
+            // width: max-content;
+            // height: 24px;
+            font-size: 12px;
+            font-weight: 400;
+            border: none;
+            // border-bottom: 1px solid #AFAFAF;
+            outline: none;
+        }
+    }
+}
