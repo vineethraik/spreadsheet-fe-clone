@@ -4,6 +4,7 @@ import panel from '../../assets/Panel.svg';
 import Breadcrumbs from '../../components/Breadcrumbs/Breadcrumbs';
 import SearchPill from '../../components/SearchPill/SearchPill';
 import Notification from '../../components/Notification/Notification';
+import UserCard from '../../components/UserCard/UserCard';
 
 
 function TopBar(): JSX.Element {
@@ -29,6 +30,7 @@ function TopBar(): JSX.Element {
         <div className="top_bar_container_right flex flex-row items-center justify-end">
           <SearchPill />
           <Notification />
+          <UserCard />
         </div>
       </div>
     );
