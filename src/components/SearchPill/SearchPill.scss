@@ -13,9 +13,7 @@
             height: 16px;
         }
         &_input{
-            &_container{
-                overflow: hidden;
-            }
+            
             width: 100%;
             overflow: scroll;
             // width: max-content;
@@ -25,6 +23,9 @@
             border: none;
             // border-bottom: 1px solid #AFAFAF;
             outline: none;
+            &_container{
+                overflow: hidden;
+            }
         }
     }
 }

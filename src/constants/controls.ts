@@ -1,1 +1,1 @@
-export const minSheetPageWidth: number = 700;
+export const minSheetPageWidth: number = 750;
