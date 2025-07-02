@@ -1,0 +1,20 @@
+.tool_bar {
+  width: 100%;
+  height: 48px;
+  color: #121212;
+  border-bottom: 1px solid #eeeeee;
+  padding: 6px 8px;
+  &_left {
+    &_container {
+      gap: 8px;
+    }
+    &_table_action_container {
+      gap: 4px;
+    }
+  }
+  &_right {
+    &_container {
+      gap: 4px;
+    }
+  }
+}
