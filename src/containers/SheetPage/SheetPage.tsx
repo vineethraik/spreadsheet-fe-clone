@@ -1,6 +1,7 @@
 import SmallScreenFallback from "../../components/SmallScreenFallback/SmallScreenFallback";
 import { minSheetPageWidth } from "../../constants/controls";
 import { useWindowSize } from "../../utility/Layout";
+import PageBar from "../PageBar/PageBar";
 import ToolBar from "../ToolBar/ToolBar";
 import TopBar from "../TopBar/TopBar";
 import "./SheetPage.scss";
@@ -17,6 +18,7 @@ function SheetPage() {
         <>
           <TopBar/>
           <ToolBar/>
+          <PageBar/>
         </>
       )}
     </div>
