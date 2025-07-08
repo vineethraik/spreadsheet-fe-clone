@@ -39,7 +39,7 @@ export function StatusPill(
     <div className="flex justify-center  h-full w-full">
       {statusMap[value] && (
         <span
-          className="rounded-[50px] text-[12px]   leading-[16px] font-[500]  px-[8px] py-[4px]"
+          className="rounded-[50px] text-[12px] whitespace-nowrap   leading-[16px] font-[500]  px-[8px] py-[4px]"
           style={{ color: color, backgroundColor: backgroundColor }}
         >
           {" "}
