@@ -1,0 +1,62 @@
+table {
+  border: 1px solid lightgray;
+}
+
+tbody {
+  border-bottom: 1px solid lightgray;
+}
+
+th {
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  // padding: 2px 4px;
+}
+
+td {
+  border-bottom: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+  // padding: 2px 4px;
+}
+td:nth-last-child(2),
+td:nth-last-child(1),
+th:nth-last-child(2),
+th:nth-last-child(1),
+table {
+  border-right-style: dashed;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid lightgray !important;
+
+  background: white;
+  z-index: 10;
+}
+
+th:first-child,
+td:first-child {
+  position: sticky;
+  left: 0;
+  border-right: 1px solid lightgray !important;
+  background: white;
+  z-index: 5;
+}
+
+th:nth-last-child(1),
+td:nth-last-child(1) {
+  position: sticky;
+  right: 0;
+  border-left: 1px dashed lightgray !important;
+
+  background: white;
+  z-index: 5;
+}
+
+.custom_table {
+  overflow: scroll;
+  width: 100%;
+  &_container {
+    overflow: scroll;
+  }
+}
