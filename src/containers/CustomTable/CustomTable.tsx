@@ -63,7 +63,7 @@ function CustomTable({ pageData = mockData.pages[0] }): JSX.Element {
         ],
       },
     });
-  }, [pageData]);
+  }, [pageData, setPageData]);
 
   return (
     <div className=" custom_table hide-scrollbar text-black  ">

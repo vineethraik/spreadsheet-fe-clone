@@ -37,7 +37,7 @@ export function HeaderText(
   return (
     <div
       style={{ ...style, minWidth: "max-content" }}
-      className={` bg-[#EEEEEE] flex gap-[4px] items-center justify-start whitespace-nowrap w-full p-[4px] pl-[8px] h-full bg-gray text-left ${
+      className={` h-[32px] bg-[#EEEEEE] text-[12px] leading-[16px] font-[600]  flex gap-[4px] items-center justify-start whitespace-nowrap w-full p-[4px] pl-[8px]  bg-gray text-left ${
         "className" in props ? className : ""
       }`}
     >

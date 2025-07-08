@@ -23,8 +23,8 @@ function Breadcrumbs({
   path: string;
   separator?: string;
   SeparatorElement?: () => JSX.Element;
-  onPathClick?: Function;
-  onMoreOptionsClick?: Function;
+  onPathClick?: (path: string) => void;
+  onMoreOptionsClick?: () => void;
 }): JSX.Element {
   const paths = path.split(separator);
   return (

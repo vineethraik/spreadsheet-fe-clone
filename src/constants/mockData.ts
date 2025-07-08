@@ -64,7 +64,7 @@ export const mockData: { pages: Array<PageData> } = {
             },
             cellData: {
               type: "row_number",
-              valueFn: (info, i) => `${i + 1}`,
+              valueFn: (_, i) => `${i + 1}`,
             },
           },
           {
@@ -388,7 +388,7 @@ export const mockData: { pages: Array<PageData> } = {
             },
             cellData: {
               type: "row_number",
-              valueFn: (info, i) => `${i + 1}`,
+              valueFn: (_, i) => `${i + 1}`,
             },
           },
           {
@@ -654,7 +654,7 @@ export const mockData: { pages: Array<PageData> } = {
             },
             cellData: {
               type: "row_number",
-              valueFn: (info, i) => `${i + 1}`,
+              valueFn: (_, i) => `${i + 1}`,
             },
           },
           {
@@ -891,7 +891,7 @@ export const mockData: { pages: Array<PageData> } = {
             },
             cellData: {
               type: "row_number",
-              valueFn: (info, i) => `${i + 1}`,
+              valueFn: (_, i) => `${i + 1}`,
             },
           },
           {

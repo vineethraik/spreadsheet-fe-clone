@@ -14,7 +14,7 @@ function Notification({
   },
 }: {
   notifications?: Array<string | object>;
-  onClick?: Function;
+  onClick?: () => void;
 }): JSX.Element {
   const count = notifications.length > 9 ? "9+" : notifications.length;
 
