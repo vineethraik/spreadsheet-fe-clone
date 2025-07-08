@@ -1,69 +1,32 @@
-# React + TypeScript + Vite
+# Spreadsheet Frontend Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+This project is a simplified frontend application designed to mimic the core functionalities and visual appearance of a spreadsheet application, similar to Microsoft Excel or Google Sheets. It focuses on efficient data display, manipulation, and user interaction within a tabular format.
 
-Currently, two official plugins are available:
+## Key Architectural Decisions and Learnings
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1.  **Modular Table Cell Components**:
+    To ensure reusability, maintainability, and performance, the application utilizes a modular approach for rendering table cells. Instead of a monolithic component, specialized "building blocks" (e.g., `CurrencyCell`, `DateCell`, `StatusPill`) are created for different data types. This design offers several advantages:
+    *   **Extensibility**: New data types can be easily integrated by developing new cell components without impacting the core table structure.
+    *   **Code Readability**: Each component is responsible for a single, well-defined task, leading to cleaner and more understandable code.
+    *   **Performance Optimization**: Individual cell components can be optimized for rendering efficiency, contributing to a smoother user experience, especially with large datasets.
 
-## Expanding the ESLint configuration
+2.  **Custom Table Implementation (`CustomTable.tsx`)**:
+    The central table component is a custom implementation, providing granular control over its behavior and rendering. This bespoke approach facilitates:
+    *   **Performance Tuning**: Direct control over rendering logic allows for fine-tuned optimizations, crucial for handling extensive data efficiently.
+    *   **Data Agnosticism**: The table is designed to be flexible, capable of consuming various data structures, including the mock data provided in `mockData.ts`.
+  
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3.  **Reusable UI Components**:
+    The application leverages a library of small, reusable UI components (e.g., `Breadcrumbs`, `CustomButton`, `Notification`, `SearchPill`). 
+   
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies Used
+*   React
+*   TypeScript
+*   react-table
+*   SCSS (for styling)
+*   Vite (for build tooling)
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
